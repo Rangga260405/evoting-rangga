@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* RESPONSIVE TEXT */
+h1 {
+    line-height: 1.2;
+}
+
+button,
+a {
+    transition: all .3s ease;
+}
