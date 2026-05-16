@@ -19,14 +19,14 @@ WORKDIR /app
 
 COPY . .
 
-# Install PHP dependencies
 RUN composer install --optimize-autoloader --no-interaction
 
-# Install Node dependencies
 RUN npm install
-
-# Build Vite assets
 RUN npm run build
+
+RUN rm -f public/hot
+
+RUN php artisan optimize:clear
 
 EXPOSE 8080
 
